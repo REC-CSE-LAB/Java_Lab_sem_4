@@ -5,7 +5,7 @@
 //        qualifying racers.
 
 // Source Code :
-package com.College_Java_Lab.Basics;
+package com.College_Java_Lab.Exp_1_Basics;
 
 import java.util.Scanner;
 

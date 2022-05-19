@@ -3,7 +3,7 @@
 
 // A simple Java Program consists of the following Syntax.
 
-package com.College_Java_Lab.Basics;
+package com.College_Java_Lab.Exp_1_Basics;
 
 public class Case_Study {
     public static void main(String [] args) {

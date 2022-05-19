@@ -4,7 +4,7 @@
 
 // Source Code :
 
-package com.College_Java_Lab.Control_Flow;
+package com.College_Java_Lab.Exp_2_Control_Flow;
 
 import java.util.Scanner;
 

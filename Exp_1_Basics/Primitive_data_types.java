@@ -6,7 +6,7 @@
 
 // Source Code :
 
-package com.College_Java_Lab.Basics;
+package com.College_Java_Lab.Exp_1_Basics;
 
 public class Primitive_data_types {
     public static void main(String[] args) {
