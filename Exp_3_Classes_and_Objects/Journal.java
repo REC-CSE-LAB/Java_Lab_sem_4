@@ -12,31 +12,45 @@ import java.util.Scanner;
 
 public class Journal {
 
-    static String author_name;
-    static String title;
-    static String date_of_submission;
+    String author_name;
+    String title;
+    String date_of_submission;
+
+    Journal( String name, String title, String date){
+        this.author_name = name;
+        this.title = title;
+        this.date_of_submission = date;
+    }
+
+    public static void displayDetails ( Journal obj ){
+        String [] date = obj.date_of_submission.split("/",3);
+        System.out.println( "Author is " + obj.author_name );
+        System.out.println( "Title is " + obj.title );
+        System.out.println( "Submitted on " + date[2] + "/" + date[1] + "/" + date[0] );
+    }
+
+    public static void getSubmissionDetails( Journal obj ){
+        for ( int i = 0; i < obj.title.length(); ++i ){
+            if( i != 0 && obj.title.charAt(i-1) == ' ' )
+                System.out.print(Character.toUpperCase(obj.title.charAt(i)));
+            else
+                System.out.print(obj.title.charAt(i));
+        }
+    }
+
 
     public static void main(String[] args) {
 
         Scanner input = new Scanner(System.in);
 
-        author_name = input.nextLine();
-        title = input.nextLine();
-        date_of_submission = input.nextLine();
+        String author_name = input.nextLine();
+        String title = input.nextLine();
+        String date_of_submission = input.nextLine();
 
-        String [] date = date_of_submission.split("/",3);
+        Journal book = new Journal( author_name, title, date_of_submission );
 
-        System.out.println( "Author is " + author_name );
-        System.out.println( "Title is " + title );
-        System.out.println( "Submitted on " + date[2] + "/" + date[1] + "/" + date[0] );
-
-        for ( int i = 0; i < title.length(); ++i ){
-            if( i != 0 && title.charAt(i-1) == ' ' )
-                System.out.print(Character.toUpperCase(title.charAt(i)));
-            else
-                System.out.print(title.charAt(i));
-        }
-
+        displayDetails(book);
+        getSubmissionDetails(book);
     }
 }
 
