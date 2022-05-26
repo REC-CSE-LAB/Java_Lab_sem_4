@@ -12,9 +12,7 @@ import java.util.Scanner;
 
 public class Journal {
 
-    String author_name;
-    String title;
-    String date_of_submission;
+    String author_name, title, date_of_submission;
 
     Journal( String name, String title, String date){
         this.author_name = name;
