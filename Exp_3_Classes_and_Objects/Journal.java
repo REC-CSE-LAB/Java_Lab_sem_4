@@ -22,19 +22,19 @@ public class Journal {
         this.date_of_submission = date;
     }
 
-    public static void displayDetails ( Journal obj ){
-        String [] date = obj.date_of_submission.split("/",3);
-        System.out.println( "Author is " + obj.author_name );
-        System.out.println( "Title is " + obj.title );
+    public void displayDetails (){
+        String [] date = this.date_of_submission.split("/",3);
+        System.out.println( "Author is " + this.author_name );
+        System.out.println( "Title is " + this.title );
         System.out.println( "Submitted on " + date[2] + "/" + date[1] + "/" + date[0] );
     }
 
-    public static void getSubmissionDetails( Journal obj ){
-        for ( int i = 0; i < obj.title.length(); ++i ){
-            if( i != 0 && obj.title.charAt(i-1) == ' ' )
-                System.out.print(Character.toUpperCase(obj.title.charAt(i)));
+    public void getSubmissionDetails(){
+        for ( int i = 0; i < this.title.length(); ++i ){
+            if( i != 0 && this.title.charAt(i-1) == ' ' )
+                System.out.print(Character.toUpperCase(this.title.charAt(i)));
             else
-                System.out.print(obj.title.charAt(i));
+                System.out.print(this.title.charAt(i));
         }
     }
 
@@ -49,8 +49,8 @@ public class Journal {
 
         Journal book = new Journal( author_name, title, date_of_submission );
 
-        displayDetails(book);
-        getSubmissionDetails(book);
+        book.displayDetails();
+        book.getSubmissionDetails();
     }
 }
 
