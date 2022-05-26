@@ -42,7 +42,11 @@ public class CalAge {
     public static void findAge(int current_date, int current_month,int current_year, int birth_date,int birth_month, int birth_year)
     {
         double d;
-        int month[] = { 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
+        int [] month = { 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
+        
+        if( birth_month == 2 && isLeap(birth_year) ){
+            month[1] = 29;
+        }
 
         if(birth_date > current_date) {
             current_month = current_month - 1;
