@@ -23,10 +23,11 @@ public class BookStore {
         this.Author = author;
         this.Publisher = publisher;
         this.Selling_price = selling_price;
+
+        book_count += this.Quantity;
     }
 
     void displayQuantity(){
-        book_count += this.Quantity;
         System.out.println("Title-"+this.Title+" Quantity-"+this.Quantity);
     }
 
