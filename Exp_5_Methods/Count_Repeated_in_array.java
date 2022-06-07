@@ -33,11 +33,9 @@ public class Count_Repeated_in_array {
     public static int[][] OccurrenceOfArrayElements ( int[] arr1, int[] arr2 ) {
 
         int [] arr = new int[30];
-        for( int i = 0; i < 15; ++i ){
-            arr[i] = arr1[i];
-        }
-        for( int i = 0; i < 15; ++i ){
-            arr[i+15] = arr2[i];
+        for( int i = 0, j = 0; i < 15; ++i, ++j ){
+            arr[j] = arr1[i];
+            arr[++j] = arr2[i];
         }
         Arrays.sort(arr);
 
