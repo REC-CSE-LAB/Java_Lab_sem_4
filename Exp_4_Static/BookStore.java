@@ -23,7 +23,9 @@ public class BookStore {
         this.Author = author;
         this.Publisher = publisher;
         this.Selling_price = selling_price;
+    }
 
+    void displayQuantity(){
         book_count += this.Quantity;
         System.out.println("Title-"+this.Title+" Quantity-"+this.Quantity);
     }
@@ -37,6 +39,12 @@ public class BookStore {
         BookStore book2 = new BookStore( "The Cherry Tree","Ruskin Bond","Boyds Mills Press", "kids", 10, 175);
         BookStore book3 = new BookStore( "Industrial Engineering And Production Management", "Martand T Telsang", "Global Net Publication", "Engineering", 15, 509);
         BookStore book4 = new BookStore( "Bose","Maj Gen G.D. Bakshi","National Book Trust","story", 30, 980 );
+
+        book1.displayQuantity();
+        book2.displayQuantity();
+        book3.displayQuantity();
+        book4.displayQuantity();
+
         trackSalesStatus();
     }
 }
