@@ -24,12 +24,14 @@ public class Count_Repeated_in_array {
             arr2[i] = input.nextInt();
         }
 
-        int [] arr = array_merge( arr1, arr2 );
-
-        print_repeated( arr );
+        int [][] ans = OccurrenceOfArrayElements( arr1, arr2 );
+        for ( int [] an : ans ) {
+            System.out.println(an[0] + " : " + an[1]);
+        }
     }
 
-    public  static int[] array_merge(int[] arr1, int[] arr2) {
+    public static int[][] OccurrenceOfArrayElements ( int[] arr1, int[] arr2 ) {
+
         int [] arr = new int[30];
         for( int i = 0; i < 15; ++i ){
             arr[i] = arr1[i];
@@ -38,14 +40,14 @@ public class Count_Repeated_in_array {
             arr[i+15] = arr2[i];
         }
         Arrays.sort(arr);
-        return arr;
-    }
 
-    public static void print_repeated(int[] arr) {
-        int temp = arr[0],count = 0;
+        int temp = arr[0],count = 0,j=0;
+        int [][] ans = new int [15][2];
+
         for( int i : arr ){
             if( temp != i ){
-                System.out.println(temp+" : "+count);
+                ans[j][0] = temp;
+                ans[j++][1] = count;
                 temp = i;
                 count = 1;
             }
@@ -53,7 +55,10 @@ public class Count_Repeated_in_array {
                 ++count;
             }
         }
-        System.out.println(temp+" : "+count);
+        ans[j][0] = temp;
+        ans[j][1] = count;
+
+        return ans;
     }
 
 }
