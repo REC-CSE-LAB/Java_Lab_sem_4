@@ -12,28 +12,32 @@ package com.College_Java_Lab.Exp_4_Static;
 
 public class BookStore {
 
-    int Selling_price, quantity;
+    int Selling_price, Quantity;
     static int book_count = 0;
     String Book_category,Author,Title,Publisher;
 
-    BookStore( String title, int quantity ){
+    BookStore( String title, String author, String publisher, String category, int quantity, int selling_price){
         this.Title = title;
-        this.quantity = quantity;
-        this.Book_category = "Unknown";
-        this.Author = "Unknown";
-        this.Publisher = "Unknown";
-        this.Selling_price = 1000;
+        this.Quantity = quantity;
+        this.Book_category = category;
+        this.Author = author;
+        this.Publisher = publisher;
+        this.Selling_price = selling_price;
 
-        book_count += quantity;
-        System.out.println("Title-"+title+" Quantity-"+quantity);
+        book_count += this.Quantity;
+        System.out.println("Title-"+this.Title+" Quantity-"+this.Quantity);
+    }
+
+    static void trackSalesStatus(){
+        System.out.println("Total stock available="+book_count);
     }
 
     public static void main(String[] args) {
-        BookStore book1 = new BookStore( "Malgudi Days", 20);
-        BookStore book2 = new BookStore( "The Cherry Tree", 10);
-        BookStore book3 = new BookStore( "Industrial Engineering And Production Management", 15);
-        BookStore book4 = new BookStore( "Bose", 30 );
-        System.out.println("Total stock available="+book_count);
+        BookStore book1 = new BookStore( "Malgudi Days", "R.K. Narayan","Indian Thought Publications","story", 20, 999);
+        BookStore book2 = new BookStore( "The Cherry Tree","Ruskin Bond","Boyds Mills Press", "kids", 10, 175);
+        BookStore book3 = new BookStore( "Industrial Engineering And Production Management", "Martand T Telsang", "Global Net Publication", "Engineering", 15, 509);
+        BookStore book4 = new BookStore( "Bose","Maj Gen G.D. Bakshi","National Book Trust","story", 30, 980 );
+        trackSalesStatus();
     }
 }
 
