@@ -9,7 +9,6 @@
 package com.College_Java_Lab.Exp_5_Methods;
 
 import java.util.Scanner;
-import java.lang.Math;
 
 public class CostCalc{
     public static void main(String[] args) {
