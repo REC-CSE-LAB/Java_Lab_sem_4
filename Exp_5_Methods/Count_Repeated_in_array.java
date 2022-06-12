@@ -9,6 +9,7 @@ package com.College_Java_Lab.Exp_5_Methods;
 /*
 For Hackerrack :-
 --------------
+( LINK :- https://www.hackerrank.com/contests/2020csebjavalab/challenges/elements-count/problem )
 
 import java.util.Scanner;
 import java.util.Arrays;
