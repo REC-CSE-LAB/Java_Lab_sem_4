@@ -7,6 +7,7 @@
 
 package com.College_Java_Lab.Exp_7_Exception.For_Record.Exp_7_B;
 
+// Source Code :-
 import java.util.Scanner;
 
 public class Employee {
@@ -195,3 +196,26 @@ class Clerk extends Employee {
     }
 
 }
+
+//  Input :-
+//  -----
+//      C002
+//      Varun
+//      Sales
+//      Clerk
+//      18000
+//      C001
+//      Kumar
+//      Sales
+//      Clerk
+//      17000
+//      4
+//      2
+//
+//  Output :-
+//  ------
+//      Employee Id:C002 Name:Varun Department: Sales Designation:Clerk Salary:18100.0
+//      Employee Id:C001 Name:Kumar Department: Sales Designation:Clerk Salary:17100.0
+//      Designations are identical:true
+//      Employee 1 LOP:3600.0
+//      Employee 2 LOP:1700.0

@@ -10,7 +10,7 @@
 //          include all teacher information in the printout. Create a main method that creates at least two
 //          student objects and two teacher objects with different values and calls displayDetails for each.
 
-package com.College_Java_Lab.Exp_6_Inheritance.For_Hacckerrack_and_Record;
+package com.College_Java_Lab.Exp_6_Inheritance.For_Hackerrack_and_Record;
 
 // Source Code :-
 

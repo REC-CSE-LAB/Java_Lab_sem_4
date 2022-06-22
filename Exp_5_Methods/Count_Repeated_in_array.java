@@ -7,7 +7,7 @@
 package com.College_Java_Lab.Exp_5_Methods;
 
 /*
-For Hackerrack :-
+For HackerRank :-
 --------------
 ( LINK :- https://www.hackerrank.com/contests/2020csebjavalab/challenges/elements-count/problem )
 
@@ -116,10 +116,12 @@ public class    Count_Repeated_in_array {
 }
 
 // Input:
+// -----
 //        45 12 32 12 45 78 78 78 95 64 12 14 12 33 35
 //        45 98 6 5 12 78 33 35 78 95 12 32 44 99 55
-
+//
 // Output:
+// ------
 //        5 : 1
 //        6 : 1
 //        12 : 6
