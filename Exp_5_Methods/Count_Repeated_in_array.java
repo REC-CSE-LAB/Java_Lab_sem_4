@@ -9,7 +9,7 @@ package com.College_Java_Lab.Exp_5_Methods;
 import java.util.Scanner;
 import java.util.Arrays;
 
-public class Count_Repeated_in_array {
+public class    Count_Repeated_in_array {
     public static void main(String[] args) {
 
         Scanner input = new Scanner(System.in);
