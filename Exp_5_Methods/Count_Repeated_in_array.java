@@ -6,6 +6,60 @@
 
 package com.College_Java_Lab.Exp_5_Methods;
 
+/*
+For Hackerrack :-
+--------------
+( LINK :- https://www.hackerrank.com/contests/2020csebjavalab/challenges/elements-count/problem )
+
+import java.util.Scanner;
+import java.util.Arrays;
+
+public class Solution {
+    public static void main(String[] args) {
+        
+        Scanner input = new Scanner(System.in);
+
+        int [] arr1 = new int[15];
+        int [] arr2 = new int[15];
+        int [] arr = new int[30];
+        
+        for ( int i = 0; i < 15; ++i ){
+            arr1[i] = input.nextInt();
+        }
+        for ( int i = 0; i < 15; ++i ){
+            arr2[i] = input.nextInt();
+        }
+        
+        for( int i = 0; i < 15; ++i ){
+            arr[i] = arr1[i];
+        }
+        for( int i = 0; i < 15; ++i ){
+            arr[i+15] = arr2[i];
+        }
+        
+        Arrays.sort(arr);
+        
+        int temp = arr[0],count = 0;
+        for( int i : arr ){
+            if( temp != i ){
+                System.out.println(temp+" : "+count);
+                temp = i;
+                count = 1;
+            }
+            else{
+                ++count;
+            }
+        }
+        System.out.println(temp+" : "+count);
+        
+    }
+}
+
+*/
+
+// For Record :-
+// ----------
+
 import java.util.Scanner;
 import java.util.Arrays;
 
