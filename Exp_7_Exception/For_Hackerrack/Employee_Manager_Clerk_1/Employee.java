@@ -5,7 +5,6 @@ import java.util.Scanner;
 public class Employee {
 
     double salary;
-    int no_of_leaves;
     String employee_id;
     String employee_name;
     String department;
@@ -60,20 +59,8 @@ public class Employee {
         this.designation = designation;
     }
 
-    public int getNo_of_leaves() {
-        return no_of_leaves;
-    }
-
-    public void setNo_of_leaves(int no_of_leaves) {
-        this.no_of_leaves = no_of_leaves;
-    }
-
     public void addBonus (){
         this.salary += 200;
-    }
-
-    public void removeBonus (){
-        this.salary -= 200;
     }
 
     public void displayDetails () {
@@ -85,15 +72,7 @@ public class Employee {
     }
 
     public boolean equals(Employee e) {
-        return(e.designation.equals(this.designation));
-    }
-
-    public double Deduction() {
-        this.removeBonus ();
-        double salPart = getSalary()/20;
-        double deductionAmount = salPart * getNo_of_leaves();
-        // double finalSalary = getSalary() - deductionAmount;
-        return deductionAmount;
+        return(e.department.equals(this.department));
     }
 
     public static void main(String[] args){
@@ -126,14 +105,6 @@ public class Employee {
 
         System.out.println( e[0].equals(e[1]) );
 
-        String leaves = input.nextLine();
-        e[0].setNo_of_leaves( Integer.parseInt( leaves ) );
-        System.out.println("Employee 1 LOP:" + e[0].Deduction() );
-
-        leaves = input.nextLine();
-        e[1].setNo_of_leaves( Integer.parseInt( leaves ) );
-        System.out.println("Employee 2 LOP:" + e[1].Deduction() );
-
     }
 
 }
@@ -147,11 +118,6 @@ class Manager extends Employee {
     @Override
     public void addBonus () {
         salary += 300;
-    }
-
-    @Override
-    public void removeBonus (){
-        this.salary -= 300;
     }
 
     @Override
@@ -171,11 +137,6 @@ class Clerk extends Employee {
     @Override
     public void addBonus () {
         salary += 100;
-    }
-
-    @Override
-    public void removeBonus (){
-        this.salary -= 100;
     }
 
     @Override

@@ -93,9 +93,7 @@ public class Employee {
     public double Deduction() {
         this.removeBonus ();
         double salPart = getSalary()/20;
-        double deductionAmount = salPart * getNo_of_leaves();
-        // double finalSalary = getSalary() - deductionAmount;
-        return deductionAmount;
+        return salPart * getNo_of_leaves();
     }
 
     public static void main(String[] args){
