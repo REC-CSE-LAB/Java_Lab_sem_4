@@ -192,6 +192,7 @@ class Clerk extends Employee {
 //      Sales
 //      Clerk
 //      17000
+//
 //  Output 1:-
 //  --------
 //      Employee Id:C002 Name:Varun Department: Sales Designation:Clerk Salary:18100.0
