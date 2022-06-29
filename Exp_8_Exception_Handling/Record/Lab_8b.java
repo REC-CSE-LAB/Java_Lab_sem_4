@@ -21,8 +21,7 @@ class AD {
     double getInitBalance(){
         return initBalance;
     }
-    void readAccountDetails()
-    {
+    void readAccountDetails() {
         Scanner s = new Scanner(System.in);
         while(true) {
             try {
@@ -74,12 +73,12 @@ class AD {
                     throw new InvalidAmount('D', amount);
                 else {
                     setInitBalance(initBalance += amount);
-                    System.out.println("Yes,your amount is deposited ,current balance : " + getInitBalance());
+                    System.out.println("Yes,your amount is deposited ,current balance : " + getInitBalance() + "\n" );
                     break;
                 }
             }
             catch (InvalidAmount i) {
-                System.out.println(i.getMessage());
+                System.out.println(i);
             }
         }
     }
@@ -101,7 +100,7 @@ class AD {
                 break;
             }
             catch (InvalidAmount i) {
-                System.out.println(i.getMessage());
+                System.out.println(i.toString());
             }
         }
     }
@@ -116,14 +115,14 @@ class InvalidAmount extends Exception {
     double amount;
 
     InvalidAmount(char t_type,double amount) {
-        this.transactionType=t_type;
-        this.amount=amount;
+        this.transactionType = t_type;
+        this.amount = amount;
     }
     public String toString() {
-        if(transactionType=='D')
-            return "Sorry,account balance is more than 5000,you cannot deposit "+amount;
-        if(transactionType=='W')
-            return "Sorry,account balance is less than "+amount+" you cannot withdraw "+amount;
+        if(transactionType == 'D')
+            return "Sorry,account balance is more than 5000,you cannot deposit "+amount+"\n";
+        if(transactionType == 'W')
+            return "Sorry,account balance is less than "+amount+" you cannot withdraw "+amount+"\n";
         return "1";
     }
 }
@@ -149,11 +148,13 @@ public class Lab_8b {
 //        INITIAL BALANCE :2000.0
 //
 //        ENTER AMOUNT TO DEPOSIT : 4000
-//        null
+//        Sorry,account balance is more than 5000,you cannot deposit 4000.0
+//
 //        ENTER AMOUNT TO DEPOSIT : 1500
 //        Yes,your amount is deposited ,current balance : 3500.0
 //
 //        ENTER AMOUNT TO WITHDRAW : 10000
-//        null
+//        Sorry,account balance is less than 10000.0 you cannot withdraw 10000.0
+//
 //        ENTER AMOUNT TO WITHDRAW : 1000
 //        Yes,your amount is 1000.0 ,current balance : 2500.0
