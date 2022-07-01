@@ -28,6 +28,7 @@ public class Synchronized_Stack extends Thread {
     public synchronized void push(int item){
         if( top == stack.length ){
             System.out.println("Stack is full, can not push items");
+            return ;
         }
         stack[++top] = item;
     }
