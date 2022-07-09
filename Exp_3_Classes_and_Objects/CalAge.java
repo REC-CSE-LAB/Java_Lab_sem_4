@@ -11,9 +11,6 @@ import java.util.Scanner;
 import java.time.format.DateTimeFormatter;
 import java.time.LocalDateTime;
 
-import java.util.Scanner;
-import java.time.format.DateTimeFormatter;
-import java.time.LocalDateTime;
 public class CalAge {
     static int MAX_VALID_YR = 9999;
     static int MIN_VALID_YR = 1800;
